@@ -107,3 +107,33 @@ console.log(window.screenY);
 
 
 // window.open("https://daca.vn" , "weblord" , "height = 400 , width = 400 , top = 400 , left = 400");
+
+// Câu 11: Lấy thông tin về tên trình duyệt
+// Đề bài: Lấy thông tin về tên trình duyệt.
+// Đáp án
+console.log(navigator.appVersion)
+
+// Câu 12: Ngôn ngữ của trình duyệt
+// Đề bài: Lấy thông tin về ngôn ngữ của trình duyệt đang sử dụng.
+// Đáp án:
+console.log(navigator.languages)
+
+// Câu 13: Độ phân giải màn hình
+// Đề bài: Lấy thông tin về độ phân giải màn hình.
+// Đáp án:
+console.log(screen.height);
+console.log(screen.width);
+
+// Câu 14: Kiểm tra thiết bị đang sử dụng là mobile hay PC?
+// Đề bài: Kiểm tra xem trình duyệt có đang chạy trên thiết bị di động hay không? Nếu có in ra chữ "Mobile", nếu không in ra chữ "PC" trên màn hình console.
+// Đáp án:
+console.log(navigator.platform)
+if(navigator.platform == "mobile")
+{
+    console.log("Mobile");
+}
+else
+{
+    console.log("PC")
+}
+
