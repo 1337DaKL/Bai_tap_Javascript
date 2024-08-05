@@ -144,12 +144,12 @@
 // hieu(5, 2) —> 3
 // tich(2, 3) —> 6
 // // thuong(6, 2) —> 3
-// import { tong , hieu , tich , thuong } from "./math.js";
+import { tong , hieu , tich , thuong } from "./math.js";
 
-// console.log(tong(2, 3));
-// console.log(hieu(5, 2));
-// console.log(tich(2, 3));
-// console.log(thuong(6, 2));
+console.log(tong(2, 3));
+console.log(hieu(5, 2));
+console.log(tich(2, 3));
+console.log(thuong(6, 2));
 // // Đáp án: 
 // oFile math.js
 // oexport function tong(a, b) {
@@ -229,34 +229,34 @@
 // Câu 10: Xử lý mảng đối tượng JSON
 // Đề bài:
 // oCho một mảng đối tượng JSON như sau:
-// const dataJSON = `
-//     [
-//         {
-//             "name": "Lê Văn A",
-//             "age": 30,
-//             "skills": ["JavaScript", "HTML", "CSS"]
-//         },
-//         {
-//             "name": "Nguyễn Thị B",
-//             "age": 25,
-//             "skills": ["Python", "Java", "C++"]
-//         },
-//         {
-//             "name": "Đỗ Văn C",
-//             "age": 35,
-//             "skills": ["Ruby", "PHP", "SQL"]
-//         }
-//     ]
-//     `;
-// const dataJS = JSON.parse(dataJSON)
-// const dataNameJs = dataJS.map((key) => {
-//     return key.name;
-// });
-// console.log(da)
-// for(const i of dataNameJs)
-// {
-//     console.log(i);
-// }
+const dataJSON = `
+    [
+        {
+            "name": "Lê Văn A",
+            "age": 30,
+            "skills": ["JavaScript", "HTML", "CSS"]
+        },
+        {
+            "name": "Nguyễn Thị B",
+            "age": 25,
+            "skills": ["Python", "Java", "C++"]
+        },
+        {
+            "name": "Đỗ Văn C",
+            "age": 35,
+            "skills": ["Ruby", "PHP", "SQL"]
+        }
+    ]
+    `;
+const dataJS = JSON.parse(dataJSON)
+const dataNameJs = dataJS.map((key) => {
+    return key.name;
+});
+console.log(da)
+for(const i of dataNameJs)
+{
+    console.log(i);
+}
 // oHãy tạo một mảng mới chứa tên của tất cả các người trong mảng ban đầu: ["Lê Văn A", "Nguyễn Thị B", "Đỗ Văn C"].
 // Đáp án:
 // const dataJSON = `
@@ -286,83 +286,83 @@
 // Câu 11: Tính tổng giá trị đơn hàng
 // Đề bài:
 // oCho 2 chuỗi JSON chứa thông tin đơn hàng (ordersJSON) và thông tin sản phẩm (productsJSON):
-// const ordersJSON = `
-//     [
-//         {
-//             "id": 1,
-//             "items": [
-//                         {
-//                         "productId": 1,
-//                         "quantity": 2
-//                         },
-//                         {
-//                         "productId": 2,
-//                         "quantity": 1
-//                         }
-//                     ]
-//         },
-//         {
-//             "id": 2,
-//             "items": [
-//                         {
-//                             "productId": 3,
-//                             "quantity": 3
-//                         }
-//                     ]
-//         }
-//     ]
-// `;
+const ordersJSON = `
+    [
+        {
+            "id": 1,
+            "items": [
+                        {
+                        "productId": 1,
+                        "quantity": 2
+                        },
+                        {
+                        "productId": 2,
+                        "quantity": 1
+                        }
+                    ]
+        },
+        {
+            "id": 2,
+            "items": [
+                        {
+                            "productId": 3,
+                            "quantity": 3
+                        }
+                    ]
+        }
+    ]
+`;
 
-// const productsJSON = `
-//     [
-//         {
-//             "id": 1,
-//             "name": "iPhone 12",
-//             "price": 1200
-//         },
-//         {
-//             "id": 2,
-//             "name": "Samsung Galaxy S21",
-//             "price": 1000
-//         },
-//         {
-//             "id": 3,
-//             "name": "Google Pixel 5",
-//             "price": 900
-//         }
-//     ]
-// `;
-// const ordersJs = JSON.parse(ordersJSON);
-// const productsJS = JSON.parse(productsJSON);
-// const calculateOrderTotal = (idOrder) => {
-//     var checkIdOrder = ordersJs.find((tmp) => {
-//         return idOrder === tmp.id;
-//     });
-//     if(checkIdOrder)
-//     {
-//         var total = 0;
-//         for(var item of checkIdOrder.items)
-//         {
-//             var checkIdProduct = productsJS.find((tmp) => {
-//                 return tmp.id === item.productId;
-//             });
-//             if(checkIdProduct)
-//             {
-//                 total += (item.quantity * checkIdProduct.price);
-//             }
-//         }
-//         return total;
-//     }
-//     else
-//     {
-//         return "khong tim thay don hang!!";
-//     }
-// };
-// // oViết một hàm có tên calculateOrderTotal() nhận vào một id đơn hàng và tính tổng giá trị của đơn hàng đó, sử dụng thông tin từ mảng đối tượng JSON "ordersJSON" và "productsJSON".
-// // oVí dụ:
-// console.log(calculateOrderTotal(1))
-// console.log(calculateOrderTotal(2))
-// console.log(calculateOrderTotal(3)) //—> 3400
+const productsJSON = `
+    [
+        {
+            "id": 1,
+            "name": "iPhone 12",
+            "price": 1200
+        },
+        {
+            "id": 2,
+            "name": "Samsung Galaxy S21",
+            "price": 1000
+        },
+        {
+            "id": 3,
+            "name": "Google Pixel 5",
+            "price": 900
+        }
+    ]
+`;
+const ordersJs = JSON.parse(ordersJSON);
+const productsJS = JSON.parse(productsJSON);
+const calculateOrderTotal = (idOrder) => {
+    var checkIdOrder = ordersJs.find((tmp) => {
+        return idOrder === tmp.id;
+    });
+    if(checkIdOrder)
+    {
+        var total = 0;
+        for(var item of checkIdOrder.items)
+        {
+            var checkIdProduct = productsJS.find((tmp) => {
+                return tmp.id === item.productId;
+            });
+            if(checkIdProduct)
+            {
+                total += (item.quantity * checkIdProduct.price);
+            }
+        }
+        return total;
+    }
+    else
+    {
+        return "khong tim thay don hang!!";
+    }
+};
+// oViết một hàm có tên calculateOrderTotal() nhận vào một id đơn hàng và tính tổng giá trị của đơn hàng đó, sử dụng thông tin từ mảng đối tượng JSON "ordersJSON" và "productsJSON".
+// oVí dụ:
+console.log(calculateOrderTotal(1))
+console.log(calculateOrderTotal(2))
+console.log(calculateOrderTotal(3)) //—> 3400
  //—> Không tìm thấy đơn hàng.
 // Đáp án:
 // const ordersJSON = `
@@ -549,35 +549,35 @@
 // console.log(calculateTotalQuantity()); // 23
 
 
-//Cau 12 :
+Cau 12 :
 
-// let productsJSON = `
-//     [
-//         {
-//             "id": 1,
-//             "name": "iPhone 12",
-//             "price": 1200
-//         },
-//         {
-//             "id": 2,
-//             "name": "Samsung Galaxy S21",
-//             "price": 1000
-//         },
-//         {
-//             "id": 3,
-//             "name": "Google Pixel 5",
-//             "price": 900
-//         }
-//     ]
-// `;
-// var productsJS = JSON.parse(productsJSON);
-// const deleteProduct = (idProduct) => {
-//     var arrayProduct = productsJS.filter((tmp) => {
-//         return tmp.id !== idProduct;
-//     })
-//     return JSON.stringify(arrayProduct);
-// }
-// console.log(deleteProduct(3));
+let productsJSON = `
+    [
+        {
+            "id": 1,
+            "name": "iPhone 12",
+            "price": 1200
+        },
+        {
+            "id": 2,
+            "name": "Samsung Galaxy S21",
+            "price": 1000
+        },
+        {
+            "id": 3,
+            "name": "Google Pixel 5",
+            "price": 900
+        }
+    ]
+`;
+var productsJS = JSON.parse(productsJSON);
+const deleteProduct = (idProduct) => {
+    var arrayProduct = productsJS.filter((tmp) => {
+        return tmp.id !== idProduct;
+    })
+    return JSON.stringify(arrayProduct);
+}
+console.log(deleteProduct(3));
 
 // Cau 13
 const productsJSON = `
