@@ -12,10 +12,11 @@ div.innerHTML = localStorage.getItem("name")
 
 
 const darkLight = localStorage.getItem("light");
-if(darkLight)
+if(darkLight)                   
 {
     const body = document.querySelector("body");
     body.classList.toggle("dark");
+    con
 }
 
 const button  = document.querySelector("#dark");
