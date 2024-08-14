@@ -54,3 +54,94 @@ html
             p= htmlh1
             p #{htmlh1}
             p !{htmlh1}
+
+        -
+            var inforUser = {
+                name: "Trinh Dac Luong",
+                age: 10,
+                phone: 09876543,
+                email: "luongtrinh2k3ndad@gmail.com"
+            }
+        
+        div 
+            p Email: #{inforUser.email}
+
+            if(inforUser.age >= 18)
+                p name: #{inforUser.name}
+                p Phone: #{inforUser.phone}
+            else 
+                p Ban cua du tuoi, Ban can tren 18 thi moi thuc hien tiep duoc
+
+
+
+
+    //- Case trong pug initial, active , inactive
+    -var statusAccount = "initial"
+    case statusAccount
+        when "initial"
+            p Cho duyet 
+        when "active"
+            p Dang hoat dong 
+        when "inactive"
+            p Dang bi khoa 
+        default 
+            p Co loi say ra
+
+
+
+    -var number = 6
+    case number 
+        when 1
+            p number bang 1
+        when 2
+            p number bang 2
+        when 3
+            p number bang 3
+        when 4
+            p number bang 4
+        when 5
+            p number bang 5
+        default 
+            p khong phai number hoac number lon hon 5 nem khong in ra
+
+    //- Vong lap
+    //- 1 each in
+
+    -
+        var inforMember = [
+            {
+                name: "Trinh Dac Luong",
+                age: 21,
+                address: "Yen Nhan, Y Yen, Nam Dinh"
+            },
+            {
+                name: "Nguyen Van A",
+                age: 17,
+                address: "Yen Dong, Y Yen, Nam Dinh"
+            },
+            {
+                name: "Le Thi Y",
+                age: 99,
+                address: "Mo Lao, Ha Dong, Ha Noi"
+            }
+        ]
+    ul
+        each infor in inforMember
+            if(infor.age >= 18)
+                li 
+                    p #{infor.name}
+                    p #{infor.age}
+                    p #{infor.address}
+            else 
+                li 
+                    p Khong in vi khong du tuoi vi thanh nien 
+    
+
+
+
+
+    - for (let i = 0; i < 10; i++)
+        p so #{i}
+
+
+            
