@@ -1,0 +1,56 @@
+doctype html 
+html 
+    head 
+        title This is home of 1337_DaKL!!
+        link(rel="stylesheet", href="/css/css.css")
+    body 
+        h1 ok.html 
+        h2 Noi dung the h2
+        p Noi dung the p
+
+        ul 
+            li Item 1
+            li Item 2
+            li Item 3
+        
+        ol 
+            li Item 1
+            li Item 2 
+
+        p Hello xin chao moi nguoi 
+        p Hello xin chao <b>DaKL</b>
+        p Hello xin chao <i>DaKL</i>
+
+
+
+        p Hello xin chao moi nguoi toi ten la Trinh Dac Luong hay con goi la 1337_DaKL toi muon tro thanh 1 lap trinh vien Web fullstack Mong moi nguoi giup do
+
+        p.
+            Hello xin chao moi nguoi toi ten la Trinh Dac Luong hay con goi la 1337_DaKL 
+            toi muon tro thanh 1 lap trinh vien Web fullstack Mong moi nguoi giup do
+
+        button(class = "calo" id="ok") CLick
+
+        //- This is comment of Pug
+        // This is comment of Html
+        -var name= "Trinh Dac Luong";
+        -var email= "luongtrinh2k3ndad@gmail.com";
+        -var age= 21;
+        div(class= "calo")
+            p= name 
+            p= email 
+            p= age
+        //- gan ten bien bang cu phap hay hon
+        div(class= "calo")
+            p Ho va ten: #{name}
+            p email: #{email}
+            p Tuoi: #{age}
+
+
+        //- Muon gan bang 1 the htm
+
+        -var htmlh1 = "<h1>Day la the h1</h1>"
+        div 
+            p= htmlh1
+            p #{htmlh1}
+            p !{htmlh1}
